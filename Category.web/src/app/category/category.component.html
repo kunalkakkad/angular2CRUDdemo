@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <button type="button" class="btn btn-primary" (click)="goBack()">Go Back</button>
+        <button type="button" class="btn btn-primary" (click)="refreshData()">Refresh</button>
+    </div>
+    <h3>Your Sub Categories are as below :</h3>
+    <div class="row">
+        <div *ngFor="let subCategory of subCategories" class="col-md-3 col-sm-6 adminFeaturesSettingDashBoard cursorPointer" (click)="OnSubCategoryClick(subCategory)">
+            <div>
+                <h3>{{subCategory.Name}}</h3>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="selectedCategory !== undefined">
+        <div class="row">
+            <label class="col-lg-4">You have selected {{selectedCategory.Name}}</label>
+            <button class="btn btn-primary" (click)="editSelectedCategory()">Edit Category</button>
+            <button class="btn btn-danger" (click)="deleteSelectedCategory()">Delete Category</button>
+        </div>
+        <div *ngIf="IsEdit">
+            <app-sub-category [addEditCategory]="selectedCategory"></app-sub-category>
+        </div>
+        <hr />
+        <div class="row">
+            <h4>Don't find your Categories ? Add a new One </h4>
+            <button class="btn btn-primary" (click)="addNewCategory()">Add Category</button>
+        </div>
+        <div *ngIf="IsAdd">
+            <hr />
+            <app-sub-category [addEditCategory]="newCategory"></app-sub-category>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+ .adminFeaturesSettingDashBoard {
+    background-color: #889524;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 2.1428571435;
+    border: 3px solid #eee;
+    transition-duration: 0.5s;
+    margin: 10px 0 15px 20px !important;
+    padding: 10px 10px 10px 10px !important;
+    width: 180px !important;
+    height: 180px !important;
+}
+
+.adminFeaturesSettingDashBoard:hover {
+        transition-duration: 0.5s;
+        transform: translateY(-8px);
+        -webkit-box-shadow: 0 17px 28px -12px #ccc;
+        -moz-box-shadow: 0 17px 28px -12px #ccc;
+        box-shadow: 0 17px 28px -12px #ccc;
+        background: #889524;
+        border: 3px solid #ccc;
+    }
+
+.cursorPointer
+{
+    cursor: pointer;
+}    
